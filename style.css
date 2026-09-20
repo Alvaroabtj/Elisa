@@ -190,3 +190,154 @@ h2 {
   .player { padding: 15px; }
   .letter { padding: 45px 28px; }
 }
+/* =========================
+   DATAS IMPORTANTES
+========================= */
+
+.important-dates {
+    max-width: 850px;
+    margin: 70px auto;
+    padding: 45px 25px;
+    text-align: center;
+}
+
+.important-dates h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    color: #f3d5d9;
+    margin-bottom: 12px;
+}
+
+.dates-intro {
+    color: #cbb9bd;
+    font-size: 1rem;
+    margin-bottom: 45px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 28px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #b97986,
+        #b97986,
+        transparent
+    );
+}
+
+.date-item {
+    position: relative;
+    display: flex;
+    gap: 25px;
+    margin-bottom: 35px;
+    align-items: flex-start;
+}
+
+.date-item:last-child {
+    margin-bottom: 0;
+}
+
+.date-icon {
+    position: relative;
+    z-index: 1;
+    min-width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #241b21;
+    border: 1px solid #b97986;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    box-shadow: 0 0 15px rgba(185, 121, 134, 0.15);
+}
+
+.date-content {
+    flex: 1;
+    padding: 5px 0 10px;
+}
+
+.date {
+    display: block;
+    color: #d99ba8;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 7px;
+}
+
+.date-content h3 {
+    color: #f5e4e7;
+    font-family: "Playfair Display", serif;
+    font-size: 1.35rem;
+    margin: 0 0 8px;
+}
+
+.date-content p {
+    color: #cbb9bd;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Efeito ao passar o mouse */
+
+.date-item:hover .date-icon {
+    background: #3a252e;
+    transform: scale(1.08);
+    transition: 0.3s ease;
+}
+
+.date-item:hover .date-content h3 {
+    color: #e8aab6;
+    transition: 0.3s ease;
+}
+
+/* Responsividade para celulares */
+
+@media (max-width: 600px) {
+    .important-dates {
+        padding: 35px 15px;
+        margin: 45px auto;
+    }
+
+    .important-dates h2 {
+        font-size: 1.8rem;
+    }
+
+    .timeline::before {
+        left: 23px;
+    }
+
+    .date-item {
+        gap: 18px;
+        margin-bottom: 30px;
+    }
+
+    .date-icon {
+        min-width: 46px;
+        width: 46px;
+        height: 46px;
+        font-size: 1.1rem;
+    }
+
+    .date-content h3 {
+        font-size: 1.15rem;
+    }
+
+    .date-content p {
+        font-size: 0.9rem;
+    }
+  }
